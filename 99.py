@@ -71,7 +71,7 @@ def my_kernel(arr,arr1,fp,fp2,fp3,fp4,fp5):
         arr[fp3[i]::arr1[i]]=0
         arr[fp4[i]::arr1[i]]=0
         arr[fp5[i]::arr1[i]]=0   
-my_kernel[256,36](arr,primes_gpu,fp_gpu,fp2_gpu,fp3_gpu,fp4_gpu,fp5_gpu)
+my_kernel[1024,256](arr,primes_gpu,fp_gpu,fp2_gpu,fp3_gpu,fp4_gpu,fp5_gpu)
 x=cp.where(arr==1)
 print(x[:100])
 abc=x[0].get()
