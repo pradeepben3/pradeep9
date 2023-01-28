@@ -60,7 +60,7 @@ fp2_gpu = cp.array(fp2)
 fp3_gpu = cp.array(fp3)
 fp4_gpu = cp.array(fp4)
 fp5_gpu = cp.array(fp5)
-arr=cp.ones(5*10**9,dtype=cp.uint8)  
+arr=cp.ones(10**7,dtype=cp.uint8)  
 @cuda.jit
 def my_kernel(arr,arr1,fp,fp2,fp3,fp4,fp5):
     i = cuda.grid(1)
