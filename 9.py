@@ -12,4 +12,5 @@ def my_kernel(arr,nn):
        # if arr[i] ==1:
         arr[nn[i]]=0  
 my_kernel[256,36](arr,nn)
-print(arr[:100])
+x=cp.where(arr==0)
+print(x[99],x[111166],x[551515])
