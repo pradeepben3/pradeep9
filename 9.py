@@ -11,5 +11,5 @@ def my_kernel(arr,nn):
     if i<nn.size:
        # if arr[i] ==1:
         arr[nn[i]]=0  
- my_kernel[256,36](arr,nn)
- print(arr[:100])
+my_kernel[256,36](arr,nn)
+print(arr[:100])
