@@ -1,6 +1,6 @@
 import cupy as cp
 
-arr=cp.ones(8*10**9,dtype=cp.uint8)
+arr=cp.ones(7*10**9,dtype=cp.uint8)
 nn=cp.random.randint(1,10**9,size=10**8)
 import cupy as cp
 import time
