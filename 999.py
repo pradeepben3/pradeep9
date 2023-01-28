@@ -60,17 +60,13 @@ fp2_gpu = cp.array(fp2)
 fp3_gpu = cp.array(fp3)
 fp4_gpu = cp.array(fp4)
 fp5_gpu = cp.array(fp5)
-arr=cp.ones(10**7,dtype=cp.uint8)  
+arr=cp.ones(10**8,dtype=cp.uint8)  
 @cuda.jit
 def my_kernel(arr,arr1,fp,fp2,fp3,fp4,fp5):
     i = cuda.grid(1)
     if i<arr1.size:
        # if arr[i] ==1:
         arr[fp[i]::arr1[i]]=0
-        arr[fp2[i]::arr1[i]]=0
-        arr[fp3[i]::arr1[i]]=0
-        arr[fp4[i]::arr1[i]]=0
-        arr[fp5[i]::arr1[i]]=0   
 my_kernel[1024,256](arr,primes_gpu,fp_gpu,fp2_gpu,fp3_gpu,fp4_gpu,fp5_gpu)
 x=cp.where(arr==1)
 print(x[:100])
