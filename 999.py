@@ -19,7 +19,7 @@ def simpleSieve(limit):
 	return primes
 start=time.time()
 tar=2**601
-primes=simpleSieve(2*10**5)
+primes=simpleSieve(2*10**7)
 print(len(primes))
 primorial =2*3*5*7*11*13*17*19*23*29*31*37*41*43*47*53*59*61*67*71*73*79*83*89*97*101*103
 print(primorial)
